@@ -17,5 +17,4 @@
   
   Na pasta db tem um arquivo do banco de dados para importar na sua maquina.
   Coloque como usuário: root e sem senha apenas.
-  
-
+   
