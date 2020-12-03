@@ -2,14 +2,14 @@
 
 include_once '../includes/header.php';
 include_once '../includes/mensagem.php'; 
-require_once '../actions/classes/alunos.php'; //incluindo a classe alunos
-$objFcn = new Alunos();  // instância
+require_once '../actions/classes/alunos.php';
+$objFcn = new Alunos();  
 
 ?>
 
 
 <div class="row">
-    <div class="col s12 m6 push-m3"> <!-- formatação do titulo das colunas -->
+    <div class="col s12 m6 push-m3"> 
         <h3 class="light">Notas dos Alunos</h3>
         <table class="striped">
             <thead>
@@ -27,7 +27,7 @@ $objFcn = new Alunos();  // instância
             <tbody> <!--  -----------------------------------MOSTRAR TODOS OS CADASTROS----------------------------------------- -->
 
                 <?php
-                foreach($objFcn->querySelectTotal() as $dados){ // função da classe alunos
+                foreach($objFcn->querySelectTotal() as $dados){ 
                 ?>
 
 

@@ -7,8 +7,8 @@ $objFcn = new Alunos();
 //--------------------------ADICIONAR CLIENTE------------------------------------
     if(isset($_POST['btn-cadastrar'])){
         if($objFcn->queryInsert($_POST) ==  'certo'){
-            $_SESSION['mensagem'] = "Cadastrado com sucesso"; // para usar essa session precisa do session_start(). o session mensagem foi formatado em mensagem.php
-            header('Location: ../adicionar.php'); // redirecionando a pag para voltar em index
+            $_SESSION['mensagem'] = "Cadastrado com sucesso";
+            header('Location: ../adicionar.php');
         }
         else if($objFcn->queryInsert($_POST) ==  'errado'){
             // var_dump($_POST);

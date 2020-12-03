@@ -1,5 +1,4 @@
 <?php
-//-------------------- incluindo o header de outra pasta e mensagem  ----------------------
 include_once 'includes/header.php';
 include_once 'includes/mensagem.php';
 ?>
@@ -13,7 +12,7 @@ include_once 'includes/mensagem.php';
 <div class="row">
     <div class="col s6 m5 push-m4">
         <h3 class="light">Novo Aluno</h3>
-        <form action="actions/criar.php" method="POST"> <!-- -------direcionando as ações dessa pagina para outro arquivo para executar com método post para enviar os dados do formulario---------  -->
+        <form action="actions/criar.php" method="POST"> 
             
         
             <div class="input-field col s8">
@@ -38,7 +37,7 @@ include_once 'includes/mensagem.php';
             </div>
          
         <div class="row col s8"> 
-        <button type="submit" class="btn blue darken-4 col s6" name="btn-cadastrar"> Cadastrar </button> <!-- botâo de cadastro -->
+        <button type="submit" class="btn blue darken-4 col s6" name="btn-cadastrar"> Cadastrar </button> 
         <a href="inicio.php" class="btn  grey darken-4 col s4 push-m1">Voltar</a>
         </div>
 
@@ -47,5 +46,5 @@ include_once 'includes/mensagem.php';
 </div>
 
 <?php
-include_once 'includes/footer.php'; //-----------incluindo o footer de outra pasta -------------
+include_once 'includes/footer.php'; 
 ?>

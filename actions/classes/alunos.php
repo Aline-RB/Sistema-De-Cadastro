@@ -27,7 +27,7 @@ class Alunos{
     }
 
     
-    public function queryInsert($dados){ //dados recebidos pelo post
+    public function queryInsert($dados){ 
 
         $regex = [
             'nome' => '/[A-Z][a-z]* [A-Z][a-z]*/',
@@ -50,7 +50,7 @@ class Alunos{
                 else if((!$regexNome && !empty($dados['materia'])) || (!$regexTelefone && !empty($dados['materia']))){
                     return 'errado';
                 }
-                else if(!$regexNome){
+                else if(!$regexNome){ //arrumar
                     return 'nome';
                 }
                 else if(!$regexTelefone){
@@ -158,42 +158,6 @@ class Alunos{
             return true;
            
         }
-
-        // public function querySelectGeral(){  //erro 
-
-        
-        //     $con = new mysqli("localhost", "root", "", "alunos");
-        //     mysqli_set_charset($con,"utf8");
-
-        //     $query1 = ("SELECT codigo_disciplina, codigo_aluno FROM notas;");
-        //     $sqlresposta = mysqli_query($con, $query1);
-        //     $dadosrecebidos = mysqli_fetch_array($sqlresposta);
-        //     $id_disciplina = $dadosrecebidos[0]; //id
-        //     $id_aluno = $dadosrecebidos[1];
-        //     // var_dump($id_disciplina,$id_aluno);
-            
-
-    
-        //     $query2 = " SELECT d.nome from diciplina d INNER JOIN curso c on d.codigo = c.codigo_disciplina WHERE codigo_aluno = '$id_aluno';";
-        //     $sqlresposta2 = mysqli_query($con, $query2);
-        //     $dadosrecebidos2 = mysqli_fetch_array($sqlresposta2);
-        //     $dadosrecebidos2[0];
-        //     // var_dump($dadosrecebidos2); //nome da materia
-
-            
-        //     $query3 = "SELECT a.nome FROM aluno a INNER JOIN curso c ON a.id = c.codigo_aluno WHERE codigo_aluno = '$id_aluno';";
-        //     $sqlresposta3 = mysqli_query($con, $query3);
-        //     $dadosrecebidos3 = mysqli_fetch_array($sqlresposta3);
-        //     // var_dump($dadosrecebidos3); //nome do aluno
-
-        //     $query4 = "SELECT * FROM notas;";
-        //     $result = mysqli_query($con,$query4);
-        //     $row = mysqli_fetch_array($result, MYSQLI_NUM);
-        //     $row[0]= $dadosrecebidos2[0];
-        //     $row[1]= $dadosrecebidos3[0];
-        //     // var_dump($row);
-        //     return $row;
-        // }
 
     }
 

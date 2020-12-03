@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
-<!-- IMPORTANDO FONTE PARA CSS -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Playfair+Display&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&family=Space+Grotesk:wght@300&display=swap');
 </style>
@@ -22,6 +21,5 @@
 </body>
 </html>
 <?php
-//-----------incluindo footer de outra pasta----------------
 include_once 'includes/footer.php';
 ?>

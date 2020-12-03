@@ -3,19 +3,19 @@ include_once '../includes/header.php';
 
 
 
-if(isset($_GET['id'])): //vai pegar o id do link q foi posto do usuario selecionado
+if(isset($_GET['id'])): 
             $connect = new mysqli("localhost", "root", "", "alunos");
-            $id = mysqli_escape_string($connect, $_GET['id']); //esta pegando do banco de dados o id do editar  selecionado
+            $id = mysqli_escape_string($connect, $_GET['id']); 
             $sql = "SELECT * FROM aluno WHERE id = '$id'";
             $resultado = mysqli_query($connect, $sql);
-            $dados = mysqli_fetch_array($resultado);//armazenando em um array matriz os dados de $resultado
+            $dados = mysqli_fetch_array($resultado);
             $sql2 = "SELECT codigo_disciplina FROM curso WHERE codigo_aluno = '$id'";
             $resultado2 = mysqli_query($connect, $sql2);
             $dados2 = mysqli_fetch_array($resultado2);
             $sql3 = "SELECT nome FROM disciplina WHERE codigo = '$dados2[0]'";
             $resultado3 = mysqli_query($connect, $sql3);
             $dados3 = mysqli_fetch_array($resultado3);
-            $materia = $dados3[0]; // esta pegando o nome da materia que o usuario do id q foi pego pelo GET tem.
+            $materia = $dados3[0]; 
             
  endif;
 
@@ -28,7 +28,7 @@ if(isset($_GET['id'])): //vai pegar o id do link q foi posto do usuario selecion
     <div class="col s6 m5 push-m4">
         <h3 class="light">Edição</h3>
         <form action="../actions/update.php" method="POST">
-        <input type="hidden" name="id" value="<?php echo $dados['id']; ?>"><!-- pegando os valores do banco de dados da variavel $dados no GET -->
+        <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
             <div class="input-field col s8">
                 <input type="text" name="nome" id="nome" value="<?php echo $dados['nome'] ?>">
                 <label for="nome">Nome</label>

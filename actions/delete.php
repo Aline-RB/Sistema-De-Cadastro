@@ -8,8 +8,8 @@ $objFcn = new Alunos;
 
 if(isset($_POST['btn-deletar'])):
     if($objFcn->queryDelete($_POST) == TRUE){
-        $_SESSION['mensagem'] = "Deletado com sucesso"; // para usar essa session precisa do session_start(). o session mensagem foi formatado em mensagem.php
-        header('Location: ../pags/alunos_edit.php'); // redirecionando a pag para voltar em index
+        $_SESSION['mensagem'] = "Deletado com sucesso"; 
+        header('Location: ../pags/alunos_edit.php'); 
     }else{
         $_SESSION['mensagem'] = "Erro ao Deletar";
         header('Location: ../pags/alunos_edit.php');    
